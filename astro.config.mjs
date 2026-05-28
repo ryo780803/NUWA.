@@ -1,11 +1,8 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
-import tailwindcss from '@tailwindcss/vite';
-
-// https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()]
-  }
+  site: 'https://github.com/ryo780803/NUWA..git',
+  base: '/nuwa-site/',
+  integrations: [tailwind()]
 });
