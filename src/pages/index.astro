@@ -1,11 +1,409 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>NUWA</title>
+  </head>
+
+  <body>
+    <main>
+      <section
+        class="relative min-h-screen overflow-hidden bg-cover bg-center"
+        style="background-image: url('/hero1.jpg');"
+      >
+        <div class="absolute inset-0 bg-black/35"></div>
+
+        <header class="absolute left-0 top-0 z-20 w-full px-8 py-6">
+          <div class="mx-auto flex max-w-7xl items-center justify-between text-white">
+            <a href="#" class="font-serif text-2xl tracking-[0.25em]">
+              NUWA
+            </a>
+
+            <nav class="hidden items-center gap-10 text-sm tracking-[0.2em] md:flex">
+              <a href="#">ABOUT</a>
+              <a href="#">ROOMS</a>
+              <a href="#">STAY</a>
+              <a href="#">ACCESS</a>
+            </nav>
+
+            <a
+              href="#"
+              class="hidden rounded-full border border-white/70 px-6 py-2 text-sm tracking-[0.2em] md:block"
+            >
+              RESERVE
+            </a>
+          </div>
+        </header>
+
+        <div class="relative z-10 flex min-h-screen items-center justify-center px-6">
+          <div class="text-center text-white">
+            <p class="mb-6 text-sm tracking-[0.6em]">
+              PRIVATE MINPAKU STAY
+            </p>
+
+            <h1 class="font-serif text-7xl tracking-[0.25em] md:text-9xl">
+              NUWA
+            </h1>
+
+            <p class="mt-8 text-lg leading-loose tracking-[0.15em] md:text-xl">
+              包み込むように柔らかく、<br />
+              新しい和の旅を。
+            </p>
+          </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 z-10 -translate-x-1/2 text-xs tracking-[0.3em] text-white/80">
+          SCROLL
+        </div>
+      </section>
+
+	  <section class="bg-[#f6f0e7] px-6 py-32 text-[#2f241c]">
+  <div class="mx-auto grid max-w-7xl gap-20 md:grid-cols-2">
+
+    <!-- 左 -->
+    <div class="flex flex-col justify-center">
+
+      <p class="mb-4 text-sm tracking-[0.4em] text-[#9f8f7e]">
+        ABOUT
+      </p>
+
+      <h2 class="font-serif text-5xl leading-tight md:text-6xl">
+        静けさに、<br />
+        包まれる滞在。
+      </h2>
+
+      <p class="mt-10 leading-[2.4] text-[#5c5146]">
+        NUWAは、飛騨高山の落ち着いた空気の中で、
+        ゆっくりと過ごすための一棟宿です。
+
+        木の温もり、やわらかな光、
+        静かな時間。
+
+        日常から少し離れ、
+        心がほどける滞在を提供します。
+      </p>
+
+    </div>
+
+    <!-- 右 -->
+    <div class="relative">
+
+      <img
+        src="/room1.jpg"
+        alt=""
+        class="h-[650px] w-full rounded-[40px] object-cover"
+      />
+
+      <div class="absolute -bottom-10 -left-10 hidden w-56 rounded-[30px] bg-white p-8 shadow-2xl md:block">
+        <p class="text-xs tracking-[0.3em] text-[#9f8f7e]">
+          TAKAYAMA
+        </p>
+
+        <p class="mt-4 leading-loose text-[#5c5146]">
+          和の温もりと、
+          現代の快適さを融合した空間。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-[#f6f0e7] px-6 py-40">
+
+  <div class="mx-auto max-w-7xl">
+
+    <!-- title -->
+    <div class="mb-24">
+
+      <p class="mb-4 text-sm tracking-[0.4em] text-[#9f8f7e]">
+        ROOMS
+      </p>
+
+      <h2 class="font-serif text-5xl leading-tight text-[#2f241c] md:text-6xl">
+        心ほどける空間
+      </h2>
+
+    </div>
+
+    <div class="space-y-32">
+
+      <!-- room -->
+      <div class="grid items-center gap-16 md:grid-cols-2">
+
+        <div>
+
+          <img
+            src="/room1.jpg"
+            alt=""
+            class="h-[520px] w-full rounded-[12px] object-cover"
+          />
+
+        </div>
+
+        <div>
+
+          <p class="mb-4 text-sm tracking-[0.3em] text-[#9f8f7e]">
+            BED ROOM
+          </p>
+
+          <h3 class="font-serif text-4xl leading-tight text-[#2f241c]">
+            やわらかな光に包まれる、
+            静かな寝室。
+          </h3>
+
+          <p class="mt-8 leading-[2.4] text-[#6d6258]">
+            木の温もりと柔らかな照明に包まれた、
+            心から落ち着ける空間。
+
+            日常から少し離れ、
+            静かな時間をお過ごしいただけます。
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- room -->
+      <div class="grid items-center gap-16 md:grid-cols-2">
+
+        <div class="order-2 md:order-1">
+
+          <p class="mb-4 text-sm tracking-[0.3em] text-[#9f8f7e]">
+            LIVING
+          </p>
+
+          <h3 class="font-serif text-4xl leading-tight text-[#2f241c]">
+            自然光が差し込む、
+            ゆとりあるリビング。
+          </h3>
+
+          <p class="mt-8 leading-[2.4] text-[#6d6258]">
+            大きな窓から差し込む光と、
+            やわらかな空気感。
+
+            家族や仲間と、
+            穏やかな時間を共有できます。
+          </p>
+
+        </div>
+
+        <div class="order-1 md:order-2">
+
+          <img
+            src="/room2.jpg"
+            alt=""
+            class="h-[520px] w-full rounded-[12px] object-cover"
+          />
+
+        </div>
+
+      </div>
+
+      <!-- room -->
+      <div class="grid items-center gap-16 md:grid-cols-2">
+
+        <div>
+
+          <img
+            src="/room3.jpg"
+            alt=""
+            class="h-[520px] w-full rounded-[12px] object-cover"
+          />
+
+        </div>
+
+        <div>
+
+          <p class="mb-4 text-sm tracking-[0.3em] text-[#9f8f7e]">
+            KITCHEN
+          </p>
+
+          <h3 class="font-serif text-4xl leading-tight text-[#2f241c]">
+            暮らすように滞在できる、
+            キッチンスペース。
+          </h3>
+
+          <p class="mt-8 leading-[2.4] text-[#6d6258]">
+            長期滞在にも対応できる、
+            シンプルで使いやすい設備。
+
+            “泊まる”だけではなく、
+            “暮らす”感覚を大切にしています。
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="bg-[#f8f5f1] px-6 py-20">
+  <div class="mx-auto max-w-7xl">
+
+    <!-- タイトル -->
+    <div class="mb-16 text-center">
+
+      <p class="mb-3 text-sm tracking-[0.4em] text-[#b8a89a]">
+        STAY
+      </p>
+
+      <h2 class="text-4xl font-serif text-[#5b4b3f]">
+        快適にお過ごしいただくために
+      </h2>
+
+    </div>
+
+    <!-- アイコン -->
+    <div class="grid grid-cols-2 gap-y-14 md:grid-cols-6">
+
+      <div class="text-center">
+        <div class="mb-5 text-5xl text-[#b8a89a]">👥</div>
+        <p class="text-sm tracking-[0.15em] text-[#6a5c50]">
+          最大6名まで宿泊可能
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="mb-5 text-5xl text-[#b8a89a]">📶</div>
+        <p class="text-sm tracking-[0.15em] text-[#6a5c50]">
+          Wi-Fi完備
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="mb-5 text-5xl text-[#b8a89a]">🚗</div>
+        <p class="text-sm tracking-[0.15em] text-[#6a5c50]">
+          駐車場あり
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="mb-5 text-5xl text-[#b8a89a]">🍳</div>
+        <p class="text-sm tracking-[0.15em] text-[#6a5c50]">
+          キッチン完備
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="mb-5 text-5xl text-[#b8a89a]">🛁</div>
+        <p class="text-sm tracking-[0.15em] text-[#6a5c50]">
+          タオル・アメニティ
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="mb-5 text-5xl text-[#b8a89a]">🧺</div>
+        <p class="text-sm tracking-[0.15em] text-[#6a5c50]">
+          洗濯機完備
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-[#f6efe5] text-[#3b2a1f]">
+  <!-- AREA -->
+  <div class="mx-auto flex max-w-7xl gap-10 px-10 py-8">
+    <div class="w-[260px]">
+      <p class="mb-2 text-xs tracking-[0.25em] text-[#b9976a]">AREA</p>
+
+      <h2 class="mb-4 font-serif text-2xl leading-relaxed">
+        飛騨高山を楽しむ
+      </h2>
+
+      <p class="mb-5 text-xs leading-7">
+        古い町並みや朝市、自然豊かな景色など、<br />
+        飛騨高山には魅力がたくさん。<br />
+        観光やグルメを満喫できます。
+      </p>
+
+      <a
+        href="#"
+        class="inline-flex items-center gap-4 rounded-full border border-[#c9ad85] px-5 py-2 text-xs"
+      >
+        周辺観光を見る
+        <span>→</span>
+      </a>
+    </div>
+
+    <div class="grid flex-1 grid-cols-4 gap-6">
+      {[
+        { img: "/images/area01.jpg", title: "古い町並み", time: "車で約7分" },
+        { img: "/images/area02.jpg", title: "宮川朝市", time: "車で約6分" },
+        { img: "/images/area03.jpg", title: "日枝神社", time: "車で約10分" },
+        { img: "/images/area04.jpg", title: "中橋", time: "車で約8分" },
+      ].map((item) => (
+        <div>
+          <img
+            src={item.img}
+            alt={item.title}
+            class="mb-3 h-[100px] w-full rounded-xl object-cover"
+          />
+          <p class="text-sm">{item.title}</p>
+          <p class="mt-1 text-[10px] text-[#7b6a5d]">{item.time}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- RESERVE -->
+  <div
+    class="relative bg-cover bg-center"
+    style="background-image: url('/images/reserve-bg.jpg');"
+  >
+    <div class="bg-[#9a6a32]/35">
+      <div class="mx-auto flex max-w-7xl items-center justify-center gap-12 px-10 py-8">
+        <div class="text-center text-white">
+          <p class="mb-2 text-xs tracking-[0.25em]">ご予約・お問い合わせ</p>
+          <h2 class="font-serif text-2xl">ご予約はオンラインから</h2>
+          <p class="mt-2 text-xs">空室状況の確認やご予約は、こちらからどうぞ。</p>
+        </div>
+
+        <a
+          href="#"
+          class="rounded-full bg-[#f6efe5] px-10 py-4 text-sm text-[#5a3b22]"
+        >
+          ご予約・空室確認　→
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#f6efe5] px-10 py-5">
+    <div class="mx-auto flex max-w-7xl items-center justify-between">
+      <div class="font-serif text-lg">包み宿</div>
+
+      <nav class="flex gap-8 text-xs">
+        <a href="#">ホーム</a>
+        <a href="#">お部屋・設備</a>
+        <a href="#">周辺観光</a>
+        <a href="#">アクセス</a>
+        <a href="#">よくある質問</a>
+      </nav>
+
+      <div class="flex items-center gap-4 text-xs">
+        <span>◎</span>
+        <span>◎</span>
+        <span>© 2024 包み宿</span>
+      </div>
+    </div>
+  </footer>
+</section>
+
+    </main>
+  </body>
+</html>
